@@ -1186,7 +1186,7 @@ end)
 
 
 
-extraSection:NewButton("Fake Macro Hold (Q)", "fake macro", function()
+extraSection:NewButton("Fake Macro Hold (V)", "fake macro", function()
     
     local Sound = Instance.new("Sound", workspace)
 Sound.SoundId = "rbxassetid://1092093337"
@@ -1211,8 +1211,8 @@ function onButton1Up(mouse)
 end
  
 function onSelected(mouse)
-    mouse.KeyDown:connect(function(q) if q:lower()=="q"then onButton1Down(mouse)end end)
-    mouse.KeyUp:connect(function(q) if q:lower()=="q"then onButton1Up(mouse)end end)
+    mouse.KeyDown:connect(function(v) if v:lower()=="v"then onButton1Down(mouse)end end)
+    mouse.KeyUp:connect(function(v) if v:lower()=="v"then onButton1Up(mouse)end end)
 end
 onSelected(game.Players.LocalPlayer:GetMouse())
 game.StarterGui:SetCore("SendNotification",{
