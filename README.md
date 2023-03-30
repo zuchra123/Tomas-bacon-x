@@ -3543,6 +3543,67 @@ Sound:Play()
 
 end)
 
+
+
+HumanSection:NewButton("FE Korblox V2", "", function()
+	game.StarterGui:SetCore("SendNotification", {Title = "Bacon X ", Text = "Korblox Loaded", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "OK"})
+	
+	local Sound = Instance.new("Sound", workspace)
+Sound.SoundId = "rbxassetid://1092093337"
+Sound:Play()
+
+
+function Align(Part0,Part1,Position,Angle)
+    local AlignPos = Instance.new('AlignPosition', Part1);
+    AlignPos.Parent.CanCollide = false;
+    AlignPos.ApplyAtCenterOfMass = true;
+    AlignPos.MaxForce = 67752;
+    AlignPos.MaxVelocity = math.huge/9e110;
+    AlignPos.ReactionForceEnabled = false;
+    AlignPos.Responsiveness = 200;
+    AlignPos.RigidityEnabled = false;
+    local AlignOri = Instance.new('AlignOrientation', Part1);
+    AlignOri.MaxAngularVelocity = math.huge/9e110;
+    AlignOri.MaxTorque = 67752;
+    AlignOri.PrimaryAxisOnly = false;
+    AlignOri.ReactionTorqueEnabled = false;
+    AlignOri.Responsiveness = 200;
+    AlignOri.RigidityEnabled = false;
+    local AttachmentA=Instance.new('Attachment',Part1);
+    local AttachmentB=Instance.new('Attachment',Part0);
+    AttachmentA.Name = "BruhA"
+    AttachmentB.Name = "BruhB"
+    AttachmentB.Orientation = Angle
+    AttachmentB.Position = Position
+    AlignPos.Attachment0 = AttachmentA;
+    AlignPos.Attachment1 = AttachmentB;
+    AlignOri.Attachment0 = AttachmentA;
+    AlignOri.Attachment1 = AttachmentB;
+end
+
+User = game:GetService("Players").LocalPlayer
+Body = User.Character
+Soul = Body.Humanoid
+
+FakeLeg = Body.RightUpperLeg:Clone()
+FakeLeg.Transparency = 1
+Body.RightUpperLeg:Destroy()
+FakeLeg.Parent = Body
+Body.RightUpperLeg.RightUpperLeg:Destroy()
+
+local Korblox = Body["Recolor (For Korblox)"]
+Korblox.Handle.Massless = true
+Korblox.Handle:BreakJoints()
+
+Align(FakeLeg,Korblox.Handle,Vector3.new(0,.25,0),Vector3.new(0,0,0))
+
+game:GetService("RunService").Heartbeat:connect(function(t)
+    if Korblox:FindFirstChild("Handle", true) then
+        Korblox.Handle.Velocity = Vector3.new(0, 30,0)
+    end;
+end)
+end)
+
 extraSection:NewKeybind("Toggle Gui", "hide script", Enum.KeyCode.F, function()
 Library:ToggleUI()
 end)
