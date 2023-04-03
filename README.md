@@ -3547,6 +3547,242 @@ end)
 
 
 
+HumanSection:NewButton("Rape", "Rape The Player", function()
+	game.StarterGui:SetCore("SendNotification", {Title = "Bacon X ", Text = "Rape Player Loaded", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "OK"})
+	
+	local Sound = Instance.new("Sound", workspace)
+Sound.SoundId = "rbxassetid://1092093337"
+Sound:Play()
+
+local lp = game:FindService("Players").LocalPlayer
+ 
+local function gplr(String)
+	local Found = {}
+	local strl = String:lower()
+	if strl == "all" then
+		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+			table.insert(Found,v)
+		end
+	elseif strl == "others" then
+		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+			if v.Name ~= lp.Name then
+				table.insert(Found,v)
+			end
+		end 
+	elseif strl == "me" then
+		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+			if v.Name == lp.Name then
+				table.insert(Found,v)
+			end
+		end 
+	else
+		for i,v in pairs(game:FindService("Players"):GetPlayers()) do
+			if v.Name:lower():sub(1, #String) == String:lower() then
+				table.insert(Found,v)
+			end
+		end 
+	end
+	return Found 
+end
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Drop_Shadow = Instance.new("ImageLabel")
+local Drop_Shadow_2 = Instance.new("ImageLabel")
+local Drop_Shadow_3 = Instance.new("ImageLabel")
+local Drop_Shadow_4 = Instance.new("ImageLabel")
+local Drop_Shadow_5 = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+
+
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
+Frame.BorderColor3 = Color3.fromRGB(85, 170, 0)
+Frame.Position = UDim2.new(0.228555351, 0, 0.227581531, 0)
+Frame.Size = UDim2.new(0, 527, 0, 269)
+Frame.Active = true
+Frame.Draggable = true
+
+Drop_Shadow.Name = "Drop_Shadow"
+Drop_Shadow.Parent = Frame
+Drop_Shadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Drop_Shadow.BackgroundTransparency = 1.000
+Drop_Shadow.Position = UDim2.new(0, -37, 0, -36)
+Drop_Shadow.Size = UDim2.new(1.13745594, 1, 1.27004385, 1)
+Drop_Shadow.ZIndex = -5
+Drop_Shadow.Image = "rbxassetid://1113384364"
+Drop_Shadow.ImageTransparency = 0.200
+Drop_Shadow.ScaleType = Enum.ScaleType.Slice
+Drop_Shadow.SliceCenter = Rect.new(50, 50, 50, 50)
+
+Drop_Shadow_2.Name = "Drop_Shadow"
+Drop_Shadow_2.Parent = Frame
+Drop_Shadow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Drop_Shadow_2.BackgroundTransparency = 1.000
+Drop_Shadow_2.Position = UDim2.new(0, -37, 0, -36)
+Drop_Shadow_2.Size = UDim2.new(1.13745594, 1, 1.27004385, 1)
+Drop_Shadow_2.ZIndex = -5
+Drop_Shadow_2.Image = "rbxassetid://1113384364"
+Drop_Shadow_2.ImageTransparency = 0.200
+Drop_Shadow_2.ScaleType = Enum.ScaleType.Slice
+Drop_Shadow_2.SliceCenter = Rect.new(50, 50, 50, 50)
+
+Drop_Shadow_3.Name = "Drop_Shadow"
+Drop_Shadow_3.Parent = Frame
+Drop_Shadow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Drop_Shadow_3.BackgroundTransparency = 1.000
+Drop_Shadow_3.Position = UDim2.new(0, -37, 0, -36)
+Drop_Shadow_3.Size = UDim2.new(1.13745594, 1, 1.27004385, 1)
+Drop_Shadow_3.ZIndex = -5
+Drop_Shadow_3.Image = "rbxassetid://1113384364"
+Drop_Shadow_3.ImageTransparency = 0.200
+Drop_Shadow_3.ScaleType = Enum.ScaleType.Slice
+Drop_Shadow_3.SliceCenter = Rect.new(50, 50, 50, 50)
+
+Drop_Shadow_4.Name = "Drop_Shadow"
+Drop_Shadow_4.Parent = Frame
+Drop_Shadow_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Drop_Shadow_4.BackgroundTransparency = 1.000
+Drop_Shadow_4.Position = UDim2.new(0, -37, 0, -36)
+Drop_Shadow_4.Size = UDim2.new(1.13745594, 1, 1.27004385, 1)
+Drop_Shadow_4.ZIndex = -5
+Drop_Shadow_4.Image = "rbxassetid://1113384364"
+Drop_Shadow_4.ImageTransparency = 0.200
+Drop_Shadow_4.ScaleType = Enum.ScaleType.Slice
+Drop_Shadow_4.SliceCenter = Rect.new(50, 50, 50, 50)
+
+Drop_Shadow_5.Name = "Drop_Shadow"
+Drop_Shadow_5.Parent = Frame
+Drop_Shadow_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Drop_Shadow_5.BackgroundTransparency = 1.000
+Drop_Shadow_5.Position = UDim2.new(0, -37, 0, -36)
+Drop_Shadow_5.Size = UDim2.new(1.13745594, 1, 1.27004385, 1)
+Drop_Shadow_5.ZIndex = -5
+Drop_Shadow_5.Image = "rbxassetid://1113384364"
+Drop_Shadow_5.ImageTransparency = 0.200
+Drop_Shadow_5.ScaleType = Enum.ScaleType.Slice
+Drop_Shadow_5.SliceCenter = Rect.new(50, 50, 50, 50)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0227703992, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 503, 0, 50)
+TextLabel.Font = Enum.Font.Nunito
+TextLabel.Text = "Bacon X (Rape Script)"
+TextLabel.TextColor3 = Color3.fromRGB(85, 255, 0)
+TextLabel.TextSize = 40.000
+TextLabel.TextWrapped = true
+
+UICorner.Parent = Frame
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 0.960
+TextBox.Position = UDim2.new(0.0588235296, 0, 0.260223031, 0)
+TextBox.Size = UDim2.new(0, 464, 0, 50)
+TextBox.Font = Enum.Font.SourceSansBold
+TextBox.Text = "Name Here"
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 20.000
+
+UICorner_2.Parent = TextBox
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+TextButton.Position = UDim2.new(0.309297919, 0, 0.631970286, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "Rape"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 40.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:connect(function()
+
+       local d = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		local k = game.Workspace.Ignored.Shop["[Bat] - $258"]
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = k.Head.CFrame + Vector3.new(0, 3, 0)
+		if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - k.Head.Position).Magnitude <= 50 then
+			wait(.2)
+			fireclickdetector(k:FindFirstChild("ClickDetector"), 4)
+			toolf = game.Players.LocalPlayer.Backpack:WaitForChild("[Bat]")
+			toolf.Parent = game.Players.LocalPlayer.Character
+			wait()
+			game.Players.LocalPlayer.Character:WaitForChild("[Bat]")
+			game.Players.LocalPlayer.Character:WaitForChild("[Bat]").Grip = CFrame.new(-2.4000001, -0.699999988, 0, 0, 1, -0, -1, 0, -0, 0, 0, 1)
+			game.Players.LocalPlayer.Character:WaitForChild("[Bat]").GripForward = Vector3.new(0, -1, -0)
+			game.Players.LocalPlayer.Character:WaitForChild("[Bat]").GripPos = Vector3.new(1.2111, 1.11114, 1.8111)
+			game.Players.LocalPlayer.Character:WaitForChild("[Bat]").GripUp = Vector3.new(-500000, 404, 5000000)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(d)
+		end
+
+local Target = gplr(TextBox.Text)
+	if Target[1] then
+		Target = Target[1]
+
+		local Thrust = Instance.new('BodyThrust', lp.Character.HumanoidRootPart)
+		Thrust.Force = Vector3.new(0)
+		Thrust.Name = "YeetForce"
+		repeat
+			lp.Character.HumanoidRootPart.CFrame = Target.Character.HumanoidRootPart.CFrame
+			Thrust.Location = Target.Character.HumanoidRootPart.Position
+			game:FindService("RunService").Heartbeat:wait()
+		until not Target.Character:FindFirstChild("Head")
+	else
+		
+	end
+end)
+
+
+UICorner_3.Parent = TextButton
+
+end)
+
+
+
+
+
+
+HumanSection:NewButton("PP Bat", "PP", function()
+	game.StarterGui:SetCore("SendNotification", {Title = "Bacon X ", Text = "PP Bat Loaded", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "OK"})
+	
+	local Sound = Instance.new("Sound", workspace)
+Sound.SoundId = "rbxassetid://1092093337"
+Sound:Play()
+
+ local d = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		local k = game.Workspace.Ignored.Shop["[Bat] - $258"]
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = k.Head.CFrame + Vector3.new(0, 3, 0)
+		if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - k.Head.Position).Magnitude <= 50 then
+			wait(.2)
+			fireclickdetector(k:FindFirstChild("ClickDetector"), 4)
+			toolf = game.Players.LocalPlayer.Backpack:WaitForChild("[Bat]")
+			toolf.Parent = game.Players.LocalPlayer.Character
+			wait()
+			game.Players.LocalPlayer.Character:WaitForChild("[Bat]")
+			game.Players.LocalPlayer.Character:WaitForChild("[Bat]").Grip = CFrame.new(-2.4000001, -0.699999988, 0, 0, 1, -0, -1, 0, -0, 0, 0, 1)
+			game.Players.LocalPlayer.Character:WaitForChild("[Bat]").GripForward = Vector3.new(0, -1, -0)
+			game.Players.LocalPlayer.Character:WaitForChild("[Bat]").GripPos = Vector3.new(1.2111, 1.11114, 1.8111)
+			game.Players.LocalPlayer.Character:WaitForChild("[Bat]").GripUp = Vector3.new(-500000, 404, 5000000)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(d)
+		end
+
+end)
+
+
+
+
+
+
 extraSection:NewKeybind("Toggle Gui", "hide script", Enum.KeyCode.F, function()
 Library:ToggleUI()
 end)
